@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  context-path: /
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.93.158.65:3356/points?autoReconnect=true
+    username: saas
+    password: BjOFYGAY^DbA
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.qjyd.appraisal.points.bean.po
+  configuration:
+    map-underscore-to-camel-case: true
