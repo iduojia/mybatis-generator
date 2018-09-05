@@ -2,23 +2,14 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 
-    <!--<properties resource="config.properties"/>-->
-
-    <!-- 数据库驱动包位置 -->
-   <!-- <classPathEntry
-            location="D:\程序\mysql-5.6.26-winx64\mysql-connector-java-5.1.17.jar" />-->
-
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <!-- TKmybatis配置 -->
         <property name="javaFileEncoding" value="UTF-8"/>
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
-        <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
-            <!--<property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>-->
-        <!--</plugin>-->
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.qjyd.appraisal.points.util.XrxsMapper.XrxsMapper"/>
+            <property name="mappers" value="com.xxxx.XrxsMapper"/>
         </plugin>
 
         <commentGenerator>
@@ -29,28 +20,19 @@
         </commentGenerator>
         <!-- 数据库链接URL、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.93.158.65:3356/points?autoReconnect=true"
-                        userId="saas"
-                        password="BjOFYGAY^DbA" />
+                        connectionURL="jdbc:mysql://ip:3356/points?autoReconnect=true"
+                        userId="用户名"
+                        password="密码" />
         <!-- 生成模型的包名和位置 -->
-        <javaModelGenerator targetPackage="com.qjyd.appraisal.points.bean.po" targetProject="src/main/java" />
+        <javaModelGenerator targetPackage="com.xxxx.po" targetProject="src/main/java" />
         <!-- 生成的映射文件包名和位置 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
         <!-- 生成service的包名和位置 -->
-        <javaClientGenerator targetPackage="com.qjyd.appraisal.points.dao" targetProject="src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.xxxx.dao" targetProject="src/main/java" type="XMLMAPPER" />
         <!-- 要生成的那些表 -->
         <table tableName="points_flow" domainObjectName="PointsFlow" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
 
-
-
-
-<!--        <table tableName="wd_course" domainObjectName="WdCourse" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-        <table tableName="wd_solr" domainObjectName="WdSolr" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>-->
     </context>
 </generatorConfiguration> 

@@ -1,4 +1,4 @@
-package com.qjyd.appraisal.points.util.XrxsMapper;
+package com.generator.util.XrxsMapper;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

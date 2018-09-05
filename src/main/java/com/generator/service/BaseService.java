@@ -1,4 +1,4 @@
-package com.qjyd.appraisal.points.service;
+package com.generator.service;
 
 import java.util.List;
 

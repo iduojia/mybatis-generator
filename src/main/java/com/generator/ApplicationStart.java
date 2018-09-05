@@ -1,4 +1,4 @@
-package com.qjyd.appraisal.points;
+package com.generator;
 
 import com.alibaba.fastjson.JSON;
 import com.qjyd.appraisal.points.bean.po.PointsFlow;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @SpringBootApplication
 @RestController
-@MapperScan(basePackages = "com.qjyd.appraisal.points.dao")
+@MapperScan(basePackages = "com.generator.dao")
 public class ApplicationStart {
     @Resource
     PointsFlowService pointsFlowService;
@@ -26,7 +26,7 @@ public class ApplicationStart {
         PointsFlow pf = new PointsFlow();
         pf.setPointsEmployeeId(Long.parseLong("5051"));
         int count = pointsFlowService.selectCount(pf);
-        System.out.println("selectCount测试： 流水中5051的员工数量为："+count);
+        System.out.println("selectCount测试： 数量为："+count);
 
         List<PointsFlow> list = pointsFlowService.select(pf);
         System.out.println(JSON.toJSONString(list));

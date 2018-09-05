@@ -1,6 +1,7 @@
-package com.qjyd.appraisal.points.service.impl;
+package com.generator.service.impl;
 
-import com.qjyd.appraisal.points.util.XrxsMapper.XrxsMapper;
+import com.generator.util.XrxsMapper.XrxsMapper;
+
 import java.util.List;
 import org.apache.ibatis.session.RowBounds;
 
